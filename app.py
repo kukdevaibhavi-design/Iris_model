@@ -6,7 +6,7 @@ import numpy as np
 model = joblib.load('iris_model.pkl')
 
 #page title
-st.title(Iris Flower Prediction App')
+st.title('Iris Flower Prediction App')
 
 st.header('Enter the measurement of the Iris flower:')
 

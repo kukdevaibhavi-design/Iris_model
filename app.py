@@ -10,4 +10,17 @@ st.title(Iris Flower Prediction App')
 
 st.header('Enter the measurement of the Iris flower:')
 
-input label
+input labels
+sepal_lenght = st.number_input('Sepal Lenght (cm)', min_value=0.0, max_value=10.0, values=5.0, step=0.1)
+sepal_width = st.number_input('Sepal Width (cm)', min_value=0.0, max_value=10.0, values=3.0, step=0.1)
+petal_lenght = st.number_input('Petal Lenght (cm)', min_value=0.0, max_value=8.0, values=4.0, step=0.1)
+petal_lenght = st.number_input('Petal Width (cm)', min_value=0.0, max_value=10.0, values=1.0, step=0.1)
+
+#prediction
+if st.button('Predict'):
+  input_data = np.array([[sepal_lenght,
+                          sepal_width,
+                          petal_lenght,
+                          petal_lenght]]).astype(np.float64)
+  prediction = model.predict(input.data)
+  st.success(f'The prediction Iris species is: {prediction[0]'}

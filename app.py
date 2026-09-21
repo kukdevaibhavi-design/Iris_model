@@ -20,6 +20,6 @@ if st.button('Predict'):
    input_data = np.array([[sepal_length,
                             sepal_width,
                             petal_length,
-                            petal_width]])
+                            petal_width]]).astype(np.float64)
   prediction = model.predict(input_data)
   st.success(f'The prediction Iris species is: {prediction[0]}')
